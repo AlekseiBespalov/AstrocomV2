@@ -13,6 +13,7 @@ public class SolarDateController : MonoBehaviour {
     //public InputField monthText;
     //public InputField dayText;
     public TextMeshProUGUI CurrentDate;
+    public TextMeshProUGUI CurrentDateHighlighted;
     public GameObject SolarSystemControlPanel;
 
     //public Text currentTime;
@@ -65,6 +66,7 @@ public class SolarDateController : MonoBehaviour {
         //currentTime.text =  newTime.ToString("yyyy:MM:dd"); // 24h format
         //currentTime.text = newTime.ToString("yyyy:MM:dd HH:mm:ss");
         CurrentDate.SetText(newTime.ToString("yyyy:MM:dd HH:mm:ss"));
+        CurrentDateHighlighted.SetText(newTime.ToString("yyyy:MM:dd HH:mm:ss"));
 
         // ICK! Need to wait until GE moves these objects before can clear the trail
         if (clearTrail) {

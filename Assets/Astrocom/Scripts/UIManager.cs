@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
     {
         MainCanvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
         StandartUI.SetActive(false);
+        RemoveButton.SetActive(false);
         ManipulationSystem.Instance.ObjectRemoved += OnObjectRemoved;
     }
 

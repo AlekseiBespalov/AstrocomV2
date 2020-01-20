@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentDate: {fileID: 7962376962390868503}
+  CurrentDateHighlighted: {fileID: 7962376963785576016}
   SolarSystemControlPanel: {fileID: 7962376962005884283}
   solarSystem: {fileID: 0}
 --- !u!114 &7498320698651479838

@@ -1,4 +1,5 @@
 ﻿using System;
+using Astrocom.Scripts.ARCoreScripts.ManipulationSystem;
 using UnityEngine;
 
 /// <summary>
@@ -51,4 +52,11 @@ public class AstrocomObject : MonoBehaviour
     public bool Unmovable { get => _unmovable; }
     [SerializeField]
     private bool _unmovable;
+
+    private void Start() {
+        if(Unmovable)
+        {
+            GetComponentInParent<GameObject>().GetComponentInChildren<ScaleManipulator>().GetComponent<GameObject>().SetActive(false);
+        }
+    }
 }
