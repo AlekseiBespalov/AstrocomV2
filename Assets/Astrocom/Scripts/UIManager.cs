@@ -28,7 +28,6 @@ public class UIManager : MonoBehaviour
         ManipulationSystem.Instance.ObjectRemoved += OnObjectRemoved;
     }
 
-    //FIXME: Adjust ui by Astrocom object specs
     public void OnObjectSelected(GameObject selectedObject)
     {
         RemoveButton.SetActive(true);
@@ -72,9 +71,10 @@ public class UIManager : MonoBehaviour
             StandartUI.SetActive(false);
     }
 
+    //FIXME: When object deselected deactivate remove button (but it's doesn't work as suppose)
     public void OnObjectDeselected(GameObject deselectedObject)
     {
-        RemoveButton.SetActive(false);
+        // RemoveButton.SetActive(false)
         AstrocomObject astrocomDeselectedObject = deselectedObject.GetComponentInChildren<AstrocomObject>();
 
         if(astrocomDeselectedObject != null)

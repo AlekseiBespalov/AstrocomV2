@@ -38,7 +38,7 @@ public class AstrocomObject : MonoBehaviour
     /// </summary>
     public bool MultipleObjects { get=> _multipleObjects; }
     [SerializeField]
-    private readonly bool _multipleObjects;
+    private bool _multipleObjects;
     /// <summary>
     /// True if object can't be scaled in scene
     /// </summary>
@@ -54,7 +54,7 @@ public class AstrocomObject : MonoBehaviour
     private bool _unmovable;
 
     private void Start() {
-        if(Unmovable)
+        if(Unscalable)
         {
             GetComponentInParent<GameObject>().GetComponentInChildren<ScaleManipulator>().GetComponent<GameObject>().SetActive(false);
         }

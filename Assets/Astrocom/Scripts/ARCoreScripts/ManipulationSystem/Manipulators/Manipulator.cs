@@ -284,8 +284,8 @@ namespace Astrocom.Scripts.ARCoreScripts.ManipulationSystem
             if (m_SelectedObject == gameObject &&
                 ManipulationSystem.Instance.SelectedObject != gameObject)
             {
-                m_SelectedObject = ManipulationSystem.Instance.SelectedObject;
                 OnDeselected(m_SelectedObject);
+                m_SelectedObject = ManipulationSystem.Instance.SelectedObject;
             }
             else if (m_SelectedObject != gameObject &&
                 ManipulationSystem.Instance.SelectedObject == gameObject)

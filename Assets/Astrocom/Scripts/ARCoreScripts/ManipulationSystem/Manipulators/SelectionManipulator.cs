@@ -110,7 +110,7 @@ namespace Astrocom.Scripts.ARCoreScripts.ManipulationSystem
             if (!Frame.Raycast(
                 gesture.StartPosition.x, gesture.StartPosition.y, raycastFilter, out hit))
             {
-                OnDeselected(gameObject);
+                // OnDeselected(gameObject);
                 Deselect();
             }
         }

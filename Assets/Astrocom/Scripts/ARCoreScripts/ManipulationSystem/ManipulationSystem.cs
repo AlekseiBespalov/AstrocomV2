@@ -195,10 +195,6 @@ namespace Astrocom.Scripts.ARCoreScripts.ManipulationSystem
         /// <param name="target">The object to select.</param>
         internal void Select(GameObject target)
         {
-            var uiManager = FindObjectOfType<UIManager>();
-            if(uiManager != null)
-                uiManager.OnObjectSelected(target);
-
             if (SelectedObject == target)
                 return;
 
