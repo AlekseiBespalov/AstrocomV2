@@ -53,10 +53,16 @@ public class AstrocomObject : MonoBehaviour
     [SerializeField]
     private bool _unmovable;
 
-    private void Start() {
+    private void Start() 
+    {
         if(Unscalable)
-        {
-            GetComponentInParent<GameObject>().GetComponentInChildren<ScaleManipulator>().GetComponent<GameObject>().SetActive(false);
-        }
+            gameObject.transform.parent.GetComponentInChildren<ScaleManipulator>().enabled = false;
+        else if(!Unscalable)
+            gameObject.transform.parent.GetComponentInChildren<ScaleManipulator>().enabled = true;
+
+        if(Unmovable)
+            gameObject.transform.parent.GetComponentInChildren<TranslationManipulator>().enabled = false;
+        else if(!Unmovable)
+            gameObject.transform.parent.GetComponentInChildren<TranslationManipulator>().enabled = true;
     }
 }

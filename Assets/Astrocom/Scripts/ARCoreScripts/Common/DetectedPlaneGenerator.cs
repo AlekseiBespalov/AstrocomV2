@@ -76,27 +76,27 @@ namespace Astrocom.Scripts.ARCoreScripts.Common
             }
         }
 
-        // public void ToggleAllPlanes(bool renderPlaneState)
-        // {
-        //    foreach(GameObject plane in GameObject.FindGameObjectsWithTag("Plane"))
-        //    {
-        //        Renderer renderer = plane.GetComponent<Renderer>();
-        //        DetectedPlaneVisualizer t = plane.GetComponent<DetectedPlaneVisualizer>();
-        //        renderer.enabled = renderPlaneState;
-        //        t.enabled = renderPlaneState;
-        //    }
-        // }
+        public void ToggleAllPlanes(bool renderPlaneState)
+        {
+           foreach(GameObject plane in GameObject.FindGameObjectsWithTag("Plane"))
+           {
+               Renderer renderer = plane.GetComponent<Renderer>();
+               DetectedPlaneVisualizer t = plane.GetComponent<DetectedPlaneVisualizer>();
+               renderer.enabled = renderPlaneState;
+               t.enabled = renderPlaneState;
+           }
+        }
 
-        // public void CheckObjectsCountForTogglePlane()
-        // {
-        //    if (_objectManipulator.CurrentCountOfObjects == 0)
-        //        ToggleAllPlanes(true);
+        public void CheckObjectsCountForTogglePlane()
+        {
+           if (_objectManipulator.CurrentCountOfObjects == 0)
+               ToggleAllPlanes(true);
 
-        //    if (_objectManipulator.CurrentCountOfObjects != 0 && _objectManipulator.SelectedPrefab == -1)
-        //        ToggleAllPlanes(false);
+           if (_objectManipulator.CurrentCountOfObjects != 0 && _objectManipulator.SelectedPrefab == -1)
+               ToggleAllPlanes(false);
 
-        //    if (_objectManipulator.CurrentCountOfObjects != 0 && _objectManipulator.SelectedPrefab != -1)
-        //        ToggleAllPlanes(true);
-        // }
+           if (_objectManipulator.CurrentCountOfObjects != 0 && _objectManipulator.SelectedPrefab != -1)
+               ToggleAllPlanes(true);
+        }
     }
 }

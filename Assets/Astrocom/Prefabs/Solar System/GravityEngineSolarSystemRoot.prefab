@@ -47,6 +47,7 @@ MonoBehaviour:
   _individualUiObject: {fileID: 7962376962005884283, guid: cb461f9d200b19240a0266f6d0d2b485,
     type: 3}
   onlyIndividualUi: 1
+  _multipleObjects: 0
   _unscalable: 1
   _unmovable: 0
 --- !u!1 &5295034658648305164

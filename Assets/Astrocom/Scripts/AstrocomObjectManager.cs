@@ -17,6 +17,10 @@ public class AstrocomObjectManager : MonoBehaviour
     public delegate void AstrocomObjectRemovedHandler(AstrocomObject removedAstrocomObject);
     public event AstrocomObjectRemovedHandler AstrocomObjectRemoved;
 
+    public delegate void AstrocomObjectTranslatedHandler(AstrocomObject translatedAstrocomObject);
+    public event AstrocomObjectTranslatedHandler AstrocomObjectTranslated;
+
+
     private ObjectManipulator objectManipulator;
 
     private void Start() 
