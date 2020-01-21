@@ -48,7 +48,7 @@ namespace Astrocom.Scripts.ARCoreScripts.Common
 
         private void Start()
         {
-            _objectManipulator = (ObjectManipulator)FindObjectOfType(typeof(ObjectManipulator));
+            _objectManipulator = GameObject.FindObjectOfType<ObjectManipulator>();
         }
 
         /// <summary>
@@ -58,11 +58,9 @@ namespace Astrocom.Scripts.ARCoreScripts.Common
         {
             // Check that motion tracking is tracking.
             if (Session.Status != SessionStatus.Tracking)
-            {
                 return;
-            }
 
-            //CheckObjectsCountForTogglePlane();
+            // CheckObjectsCountForTogglePlane();
 
             // Iterate over planes found in this frame and instantiate corresponding GameObjects to
             // visualize them.
@@ -78,8 +76,8 @@ namespace Astrocom.Scripts.ARCoreScripts.Common
             }
         }
 
-        //public void ToggleAllPlanes(bool renderPlaneState)
-        //{
+        // public void ToggleAllPlanes(bool renderPlaneState)
+        // {
         //    foreach(GameObject plane in GameObject.FindGameObjectsWithTag("Plane"))
         //    {
         //        Renderer renderer = plane.GetComponent<Renderer>();
@@ -87,10 +85,10 @@ namespace Astrocom.Scripts.ARCoreScripts.Common
         //        renderer.enabled = renderPlaneState;
         //        t.enabled = renderPlaneState;
         //    }
-        //}
+        // }
 
-        //public void CheckObjectsCountForTogglePlane()
-        //{
+        // public void CheckObjectsCountForTogglePlane()
+        // {
         //    if (_objectManipulator.CurrentCountOfObjects == 0)
         //        ToggleAllPlanes(true);
 
@@ -99,6 +97,6 @@ namespace Astrocom.Scripts.ARCoreScripts.Common
 
         //    if (_objectManipulator.CurrentCountOfObjects != 0 && _objectManipulator.SelectedPrefab != -1)
         //        ToggleAllPlanes(true);
-        //}
+        // }
     }
 }

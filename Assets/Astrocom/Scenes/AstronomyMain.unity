@@ -591,6 +591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443225104}
   - component: {fileID: 443225105}
+  - component: {fileID: 443225106}
   m_Layer: 0
   m_Name: Application Manager
   m_TagString: Untagged
@@ -622,6 +623,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62aa710a180f0604893471aa5a3c6fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &443225106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443225103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8f8a4ccdfa5b14db516abe6f29bd32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &496460450
@@ -1656,7 +1669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 157dc3e9d1dda934592bd754ee0d6856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameOfObjectText: {fileID: 588150791}
   StandartUI: {fileID: 1939433746}
   RemoveButton: {fileID: 1317080957082546047}
 --- !u!4 &792535311

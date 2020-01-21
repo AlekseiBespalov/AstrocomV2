@@ -76,15 +76,11 @@ namespace Astrocom.Scripts.ARCoreScripts.ManipulationSystem
         protected override bool CanStartManipulationForGesture(DragGesture gesture)
         {
             if (gesture.TargetObject == null)
-            {
                 return false;
-            }
 
             // If the gesture isn't targeting this item, don't start manipulating.
             if (gesture.TargetObject != gameObject)
-            {
                 return false;
-            }
 
             // Select it.
             Select();

@@ -124,10 +124,10 @@ namespace Astrocom.Scripts.ARCoreScripts.ManipulationSystem
         {
             if(selectedObject != null)
             {
-                var uiManager = FindObjectOfType<UIManager>();
-                if(uiManager != null)
+                var astrocomObjectManager = FindObjectOfType<AstrocomObjectManager>();
+                if(astrocomObjectManager != null)
                 {
-                    uiManager.OnObjectSelected(selectedObject);
+                    astrocomObjectManager.OnObjectSelected(selectedObject);
                 }
             }
 
@@ -141,9 +141,9 @@ namespace Astrocom.Scripts.ARCoreScripts.ManipulationSystem
         {
             if(deselectedObject != null)
             {
-                var uiManager = FindObjectOfType<UIManager>();
-                if(uiManager != null)
-                    uiManager.OnObjectDeselected(deselectedObject);
+                var astrocomObjectManager = FindObjectOfType<AstrocomObjectManager>();
+                if(astrocomObjectManager != null)
+                    astrocomObjectManager.OnObjectDeselected(deselectedObject);
             }
 
             SelectionVisualization.SetActive(false);
